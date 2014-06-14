@@ -28,7 +28,7 @@ class ImageController extends BaseController	{
 			if($upload)	{
 				$insert_id = DB::table('photos')->insertGetId(
 					array(
-						'title' => Input::get('title');
+						'title' => Input::get('title'),
 						'image' => $fullname
 					)
 				);
