@@ -21,7 +21,7 @@ class ImageController extends BaseController	{
 			
 			$upload = $image->move(Config::get('image.upload_folder'),$fullname);
 			
-			Image::make(Config::get('image.upload_folder').'/'.$$fullname)
+			Image::make(Config::get('image.upload_folder').'/'.$fullname)
 				->resize(Config::get('image.thumb_width'),null,true)
 				->save(Config::get('image.thumb_folder').'/'.$fullname);
 				
