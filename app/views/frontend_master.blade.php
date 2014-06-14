@@ -17,7 +17,7 @@
 	@endif
 	{{--success message--}}
 	@if(Session::has('success'))
-		<h3 class="error">{{Session::get('success')}}</h3>
+		<h3 class="success">{{Session::get('success')}}</h3>
 	@endif
 	{{--content goes here--}}
 	@yield('content')
