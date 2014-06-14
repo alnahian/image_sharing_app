@@ -40,4 +40,14 @@ class ImageController extends BaseController	{
 			}
 		}
 	}
+	
+	public function getSnatch($id)	{
+		$image=Photo::find($id);
+		if($image)	{
+			return View::make('tpl.permalink')
+				->with('image',$image);
+		}	else	{
+			return Redirect::to('/')->with('error', 'Image not found');
+		}
+	}
 }
